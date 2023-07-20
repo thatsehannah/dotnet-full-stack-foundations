@@ -71,10 +71,10 @@ switch (userType) {
     Console.WriteLine("You have full access.");
     break;
   case "subadmin":
-    Console.WriteLine("You can create or delete courses");
+    Console.WriteLine("You can create or delete courses.");
     break;
   case "user":
-    Console.WriteLine("You can access the courses");
+    Console.WriteLine("You can access the courses.");
     break;
   default:
     Console.WriteLine("Trial User");
@@ -122,6 +122,42 @@ while (k < 10) {
 }
 
 Console.WriteLine("");
+
+//Jump statements - break
+for (int m = 0; m < 20; m++) {
+  if (m == 12) {
+    break;
+  }
+  Console.WriteLine(m);
+}
+
+Console.WriteLine("");
+
+//Jump statements - continue
+for (int m = 0; m < 20; m++) {
+  if (m % 2 == 1) {
+    continue;
+  }
+  Console.WriteLine(m);
+}
+
+Console.WriteLine("");
+
+//Jump statements - goto
+switch (userType) {
+  case "admin":
+    Console.WriteLine("You have full access.");
+    goto case "user";
+  case "subadmin":
+    Console.WriteLine("You can create or delete courses.");
+    break;
+  case "user":
+    Console.WriteLine("You can access the courses.");
+    break;
+  default:
+    Console.WriteLine("Trial User");
+    break;
+}
 
 
 
