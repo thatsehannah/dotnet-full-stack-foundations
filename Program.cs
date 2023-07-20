@@ -234,3 +234,12 @@ sb1.Append("C# Programming");
 sb1.Append("Java Programming");
 Console.WriteLine(sb1.ToString());
 
+//Classes and Objects
+Student student = new Student(); //Default constructor
+Console.WriteLine(student.getStudentId());
+Console.WriteLine(student.getStudentName());
+
+Student student1 = new Student(3000, "Bobby Jones"); //Parameterized constructor
+Console.WriteLine(student1.getStudentId());
+Console.WriteLine(student1.getStudentName());
+
