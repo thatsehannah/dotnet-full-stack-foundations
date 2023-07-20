@@ -15,3 +15,5 @@ Topics covered include:
 - Arrays
 - Strings
 - Jump statements
+- Classes and Objects
+- OOP Principles
