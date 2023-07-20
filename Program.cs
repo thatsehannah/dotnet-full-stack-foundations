@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Text;
+
 Console.WriteLine("Hello, World!");
 Console.WriteLine("Let's Learn C# Programming");
 
@@ -159,5 +161,76 @@ switch (userType) {
     break;
 }
 
+Console.WriteLine("");
 
+//Arrays - single dimension arrays
+int[] grades = new int[5];
+grades[0] = 25;
+grades[1] = 50;
+grades[2] = 55;
+grades[3] = 60;
+grades[4] = 40;
+
+foreach (int grade in grades) {
+  Console.WriteLine(grade);
+}
+
+Console.WriteLine();
+
+int[] grades2 = new int[5] {45, 56, 60, 90, 100};
+foreach (int grade in grades2) {
+  Console.WriteLine(grade);
+}
+
+//Arrays - multi-dimensional arrays
+int[,] multiArray = new int[3,4];
+multiArray[0,0] = 23;
+multiArray[0,1] = 45;
+multiArray[0,2] = 21;
+multiArray[0,3] = 90;
+multiArray[1,0] = 0;
+multiArray[1,1] = 32;
+multiArray[1,2] = 56;
+multiArray[1,3] = 80;
+multiArray[2,0] = 44;
+multiArray[2,1] = 33;
+multiArray[2,2] = 100;
+multiArray[2,3] = 73;
+for (int s = 0; s < multiArray.GetLength(0); s++) {
+  for (int t = 0; t < 4; t++) {
+    Console.Write(multiArray[s,t] + "\t");
+  }
+  Console.WriteLine();
+}
+
+Console.WriteLine("");
+
+int[,] multiArray2 = new int[3,4] { {1,2,3,4}, {5,6,7,8}, {9,0,1,2}};
+for (int s = 0; s < multiArray2.GetLength(0); s++) {
+  for (int t = 0; t < 4; t++) {
+    Console.Write(multiArray2[s,t] + "\t");
+  }
+  Console.WriteLine();
+}
+
+Console.WriteLine("");
+
+//Arrays - jagged arrays
+int[][] jaggedArray = new int[3][];
+jaggedArray[0] = new int[2];
+jaggedArray[1] = new int[4];
+
+//Strings manipulation
+string s1 = "Hello World";
+string s2 = "C# Programming";
+Console.WriteLine(s1.Length);
+string s3 = string.Concat(s1, s2);
+Console.WriteLine(s3);
+Console.WriteLine(s1.Equals(s2));
+
+//Strings manipulation - Mutable Strings
+StringBuilder sb1 = new StringBuilder();
+sb1.Append("C# Programming");
+sb1.Append("Java Programming");
+Console.WriteLine(sb1.ToString());
 
